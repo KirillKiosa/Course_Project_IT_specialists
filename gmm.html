@@ -1,0 +1,76 @@
+<!DOCTYPE>
+<html>
+<head>
+	<meta charset="utf-8">
+    <style>
+      button {
+        display: block;
+        width: 8%;
+        text-align: left;
+        padding: 6px;
+        background-color: lightblue;
+        border: 1.5px solid black;
+      }
+	  button:hover {
+        background-color: blue;
+        color: white;
+      }
+    </style>
+	<style>
+		#Back {
+			position: fixed;
+			left: 0;
+			bottom: 10;
+			margin: 10px;
+		}
+	</style>
+	<style>
+#table-container {
+  position: absolute;
+  top: 50px;
+  left: 0px;
+  right: 0px;
+  margin: auto;
+  width: 83%;
+  height: 1000px;
+}
+
+#table-container iframe {
+  width: 100%;
+  height: 100%;
+
+}
+</style>
+<script>
+var tableShown = false;
+var iframe;
+
+function showTable() {
+  if (!tableShown) {
+    if (iframe) {
+    iframe.parentNode.removeChild(iframe);
+  }
+    iframe = document.createElement("iframe");
+    iframe.src = "gmm_city_and_sal.htm";
+    document.getElementById("table-container").appendChild(iframe);
+    tableShown = true;
+  }
+}
+</script>
+	<script>
+function goBack() {
+  window.open('web_app.html')
+}
+</script>
+</head>
+<body>
+	<header>
+		<h1><b>Choose a category</b></h1>
+		<div>
+			<button onclick="showTable()">Город и зарплата</button>
+		</div>
+        <div id="table-container"></div>
+	</header>
+	<button id="Back" onclick = "goBack()">На главную</button>
+</body>
+</html>

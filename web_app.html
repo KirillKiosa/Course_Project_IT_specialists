@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <meta charset="utf-8">
+    <style>
+      #about-buttons {
+        float: right;
+      }
+      </style>
+  <body>
+    <div id="about-buttons">
+      <button onclick="window.open('project_info.html')">About the project</button>
+      <button onclick="window.open('creator.html')">About the creator</button>
+    </div>
+
+<head>
+    <style>
+      .dropdown {
+        background-color: lightblue;
+        position: relative;
+        display: inline-block;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        z-index: 1;
+      }
+
+      .dropdown-content button {
+        display: block;
+        width: 100%;
+        text-align: left;
+        padding: 10px;
+        background-color: lightblue;
+        border: 1.5px solid black;
+      }
+
+      .dropdown-content button:hover {
+        background-color: blue;
+        color: white;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="display: flex; align-items: absolute; justify-content: right; height: 0vh;">
+  <iframe src="data_final_1.html" style="height: 1000px; width: 85%;"></iframe>
+</div>
+    <div class="dropdown">
+      <button>Clusterization methods</button>
+      <div class="dropdown-content">
+        <button onclick="window.open('kmeans.html')">K-Means</button>
+        <button onclick="window.open('hierarchical.html')">Hierarchical</button>
+        <button onclick="window.open('dbscan.html')">DBSCAN</button>
+        <button onclick="window.open('gmm.html')">GMM</button>
+      </div>
+    </div>
+  </body>
